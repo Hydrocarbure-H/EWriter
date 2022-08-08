@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body style="margin:0px;">
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css"> -->
+    <link rel="stylesheet" href="styles/themes/xcode.css">
+    <script src="scripts/remarkable.min.js"></script>
+    <script src="scripts/highlight.min.js"></script>
+    <script src="index.js"></script>
+    <div class="container">
+        <div class="menu_bar">
+            <div class="menu_item">
+                Item 1
+            </div>
+            <div class="menu_item">
+                Item 1
+            </div>
+            <div class="menu_item">
+                Item 1
+            </div>
+            <div class="menu_item">
+                Item 1
+            </div>
+        </div>
+        <div class="left">
+            <textarea class="textarea" id="textarea" onkeydown="send_letter(event)" onkeyup="fill_in_html_render(document.getElementById('textarea').value)"></textarea>
+        </div>
+        <div class="right">
+            <div class="renderer">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

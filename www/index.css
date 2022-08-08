@@ -1,0 +1,128 @@
+@font-face {
+    font-family : "Cantarell";
+    src : url("styles/fonts/Ubuntu-C.ttf") format("woff");
+}
+
+@font-face {
+    font-family : "Nerd";
+    src : url("styles/fonts/Nerd-Mono.ttf") format("woff");
+}
+
+:root 
+{
+    --first-bg-color: #262f37;
+    --second-bg-color: #1c2229;    
+    --first-tx-color: #fff;
+    --second-tx-color: #eee;
+    --high-bg-color-1 : #a28a67;
+    --high-bg-color-2 : #528e76;
+    --high-bg-color-3 : #8f5959;
+    --high-bg-color-4 : #4E6B85;
+}
+.container
+{
+    overflow: hidden;
+    margin:0px;
+    border:0px;
+    width:100%;
+    height:100vh;
+}
+
+.container .menu_bar
+{
+    font-family: "Cantarell";
+    font-size : 1.2rem;
+    top : 0;
+    width : 100%;
+    height : 64px;
+    background-color: var(--high-bg-color-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu_bar .menu_item
+{
+    display: block;
+    width : 200px;
+    padding-top : 38px;
+    height: 64px;
+    transition: .3s;
+
+}
+
+.menu_bar .menu_item:hover
+{
+    cursor: pointer;
+    background-color: #eee2;
+}
+
+
+.container .left
+{
+    float: left;
+    width: 50%;
+    height : calc(100vh - 64px);
+}
+
+.container .right
+{
+    background-color: var(--first-bg-color);
+    color : var(--first-tx-color);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    float : right;
+    width: 50%;
+    height : calc(100vh - 64px);
+    font-family: "Cantarell";
+    font-size:1.2rem;
+    padding : 0px;
+}
+
+.container .right .renderer
+{
+    width : 100%;
+    height : calc(100vh - 64px);
+    margin : 0px 20px;
+}
+
+/* .container .right .renderer code
+{
+    border-radius: 5px;
+    padding : 2px;
+    background-color: var(--second-bg-color);
+} */
+
+.container .right .renderer pre
+{
+    background-color: var(--second-bg-color);
+    padding: 10px;
+    border-radius: 5px;
+    padding: 5px 0px 5px 10px;
+    margin-left : 0;
+}
+
+.container .right .renderer blockquote
+{
+
+    background-color: var(--second-bg-color);
+    padding: 5px 0px 5px 10px;
+    margin-left : 0;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.container .left .textarea 
+{
+    resize: none;
+    width:100%;
+    height : calc(100vh - 64px);
+    box-sizing:border-box;
+    background-color: var(--second-bg-color);
+    color:var(--second-tx-color);
+    border : none;
+    font-family: "Nerd";
+    font-size:1.8rem;
+    overflow-wrap: break-word;
+}
